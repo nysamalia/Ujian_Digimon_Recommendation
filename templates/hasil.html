@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DIGIMON</title>
+        <style>
+            body {background-image:url("https://i.pinimg.com/originals/21/aa/ca/21aacad1913d4350fe571466c1c549ae.jpg"); 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover
+            }
+            img, h1, form {text-align: center}
+            .center {display: block ; margin-left: auto; margin-right: auto; width: 40%}
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+<body>
+	<center>
+	<!-- <h2><img src="{{picture1}}" width="150" height="150">{{name1}} VS {{name2}} <img src="{{picture2}}" width="150" height="150"></h2>  -->
+    <h2>Digimon Favorit</h2>
+    <h3>{{fav["digimon"]}}</h3>
+    <p>{{fav["stage"]}}</p>
+    <p>{{fav["tipe"]}}</p>
+    <p>{{fav["attribute"]}}</p>
+    <img src="{{fav['image']}}" align='middle'/>
+
+    <br>
+    <h2>Digimon Reccommended</h2>
+   
+    <h3>{{ rek[0]['digimon']}}</h3>
+    <p>{{rek[0]['stage']}}</p>
+    <p>{{rek[0]['tipe']}}</p>
+    <p>{{rek[0]['attribute']}}</p>
+    <img src="{{rek[0]['image']}}" align='middle'/>
+
+    
+    
+    <br><br>
+            
+	<button onclick="goBack()">Back!</button>
+	<script>
+	function goBack() {
+	window.history.back();
+	}
+	</script>
+	</center>
+</body>
+</html>
