@@ -49,17 +49,9 @@ def hasil():
             rek=[]
             for i in sortDigi[:7]:
                 if df.iloc[i[0]]['digimon'] != favDigi:
-                    x = {
-                        'digimon' : df.iloc[i[0]]['digimon'],
-                        'stage' : df.iloc[i[0]]['stage'],
-                        'tipe' : df.iloc[i[0]]['type'],
-                        'attribute' : df.iloc[i[0]]['attribute'],
-                        'image' : df.iloc[i[0]]['image']
-
-                    }
-                    rek.append(x)
-                    # print(rek)
+                    rek.append([df.iloc[i[0]]['digimon'], df.iloc[i[0]]['stage'], df.iloc[i[0]]['type'], df.iloc[i[0]]['attribute'], df.iloc[i[0]]['image']])
                     return render_template ('hasil.html', rek=rek, fav=fav)  
+            
     else:
         abort(404)
 
